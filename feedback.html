@@ -14,6 +14,8 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
     <script src="js/slick.min.js"></script>
+    <script src="js/jqBootstrapValidation.js"></script>
+    <script src="js/contact_me.js"></script>
     <script src="js/main.js"></script>
 </head>
 <body>
@@ -56,23 +58,28 @@
         <div class="container">
           <h2 class="title">Отзывы</h2>
           <h3 class="subtitle">Салона CHOCOLATE</h3>
-
           <div class="feedback-block">
-            <div class="feedback-form">
-              <div class="feedback-field">
-                  <input required class="feedback-input" type="text" placeholder="Имя">
+            <form name="sentMessage" class="contactForm">
+              <div class="feedback-form">
+                <div class="feedback-field">
+                  <input class="feedback-input" type="text" name="name" placeholder="Имя">
                   <i class="fa input-icon fa-user fa-1x"></i>
-               </div>
-               <div class="feedback-field">
-                  <input class="feedback-input" type="text" placeholder="E-mail">
+                </div>
+                <div class="feedback-field">
+                  <input class="feedback-input" type="email" name="email" placeholder="E-mail">
                   <i class="fa input-icon fa-envelope-o fa-1x"></i>
                 </div>
-                <textarea class="feedback-message" placeholder="Текст сообщения"></textarea>
+
+                <div class="form-group">
+                  <textarea class="feedback-message" name="message" placeholder="Текст сообщения" required data-validation-required-message="Вы не можете отправить пустой отзыв, заполните поле 'Текст сообщения'"></textarea>
+                  <p class="help-block text-danger"></p>
+                </div>
                 <input class="feedback-btn-submit" type="submit" value="Оставить отзыв">
-            </div>
-            <p class="feedback-text">Тут Вы можете задать вопрос, оставить свои комментарии и пожелания - одним словом, отзывы о массажный салон "Chocolate".  Для нас очень важна обратная связь с Вами, поэтому это позволит улучшить качество сервиса и предлагаемых услуг. Будем рады Вашим отзывам 
-о работе персонала и салона в целом.</p>
-          </div><!--/.feedback-block-->
+              </div>
+              <p class="feedback-text">Тут Вы можете задать вопрос, оставить свои комментарии и пожелания - одним словом, отзывы о массажный салон "Chocolate".  Для нас очень важна обратная связь с Вами, поэтому это позволит улучшить качество сервиса и предлагаемых услуг. Будем рады Вашим отзывам 
+                о работе персонала и салона в целом.</p>
+              </form>
+            </div><!--/.feedback-block-->
 
           <div class="comment-block">
             <p class="comment-title">Коментарии (23)</p>
@@ -174,6 +181,19 @@
                   <button class="btn btn-xl btn form__btn"><span>Заказать звонок</span></button>
                 </div>
               </form>
+
+            </div>
+          </div>
+        </div>
+      </div>
+    <div style="display: none;" class="modal fade in" id="form-success" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-dialog callback__dialog">
+
+          <div class="modal-content">
+            <div class="modal-body text-center">
+              <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+
+              <h3 class="form__heading">Спасибо, после проверки администратором Ваш комментарий будет опубликован.</h3>
 
             </div>
           </div>
