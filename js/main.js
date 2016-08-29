@@ -21,11 +21,10 @@ jQuery(document).ready(function() {
 
 	});
 
-	jQuery("a[rel^='prettyPhoto']").prettyPhoto({
-									social_tools: false,
-									theme: 'dark_rounded',
-									arrows: true,
-	});
+});
 
-	
+$('#carousel-girl1, #carousel-girl2, #carousel-girl3, #carousel-girl4, #carousel-girl5, #carousel-girl6').hover(function () { 
+  $(this).carousel('pause');
+}, function () { 
+  $(this).carousel('cycle');
 });

@@ -662,6 +662,32 @@ h1 {
 .modal__body__form .form-group .form-control::-moz-placeholder {
   color: #000;
 }
+.gg-body{
+	position: relative;
+	padding: 0;
+}
+.gg-body .close{
+	position: absolute;
+	z-index: 10;
+	right: 10px;
+	color: #f6a824;
+	opacity: 1;
+}
+.carousel-control{
+	bottom: auto;
+	width: auto;
+}
+.carousel-control.left,
+.carousel-control.right{
+	background-image: none !important;
+	top: 200px;
+	font-size: 30px;
+	color: #f6a824;
+}
+.modal-large{
+	width: 360px;
+	margin: 0 auto;
+}
 
 @media only screen and (max-width: 1170px) {
 	.container {
@@ -1415,6 +1441,7 @@ h1 {
 
 
 /* start of masagistki.html styles*/
+
 .masagistki-top-content {
 	background: #010006;
 	padding: 165px 0 80px;
@@ -1433,28 +1460,26 @@ h1 {
 	margin: 0 auto 12px;
 	max-width: 1145px;
 }
-
-
-.masagistka,
-.masagistka-center {
+.masagistka{
+	margin-bottom: 30px;
+	text-align: center;
+}
+.masagistka a{
+	position: relative;
 	display: inline-block;
-	float: left;
-	margin: 0 14px 0 0;
-	position: relative;
+	overflow: hidden;
 }
 
-.masagistka img,
-.masagistka-center img {
+.masagistka img {
 	position: relative;
+	height: 530px;
 }
 
-.masagistka-center .masagistka-mask,
 .masagistka .masagistka-mask {
 	 opacity: 0;
 	   overflow:visible;
 	   
 	   box-sizing:border-box;
-	   height: 566px;
 	   left: 0;
 	   position: absolute;
 	   top: 0;
@@ -1463,15 +1488,13 @@ h1 {
 
 .masagistka .masagistka-mask {
 	border: 180px solid rgba(0,0,0,0.7);
-	width: 360px;
+	right: 0;
+	left: 0;
+	top: 0;
+	bottom: 0;
 }
 
-.masagistka-center .masagistka-mask {
-	border: 196px solid rgba(0,0,0,0.7);
-	width: 392px;
-}
 
-.masagistka-center .search,
 .masagistka .search {
 	color: #fff;
 	position:relative;
@@ -1488,25 +1511,16 @@ h1 {
    border: 180px solid rgba(0,0,0,0.7);
 }
 
-.masagistka-center:hover .masagistka-mask {
-	opacity: 1;
-   border: 196px solid rgba(0,0,0,0.7);
-}
 
-.masagistka-center:hover .search,
 .masagistka:hover .search {
 	opacity:1;
    transition-delay: 0.3s;
 }
 
-.masagistka:last-child {
-	margin-right: 0;
-}
-
 .naming {
 	background: #f6a824;
 	color: #fff;
-	left: -7px;
+	left: 0;
 	margin: 0;
 	padding: 8px 18px;
 	position: absolute;
@@ -1540,46 +1554,24 @@ a.pp_next {
 }
 
 @media only screen and (max-width: 1170px) {
-	.masagistka {
-		margin-right: 10px;
-	}
 
-	.masagistka img {
-		width: 286px;
-	}
-
-	.masagistka-center {
-		margin-right: 11px;
-	}
-
-	.masagistka-center img {
-		width: 312px;
-	}
-
-	.masagistka-center .masagistka-mask,
 	.masagistka .masagistka-mask {
-		height: 450px;
+		height: 100%;
+	}
+	.masagistka img{
+		height: 480px;
 	}
 
 	a.masagistka .masagistka-mask {
-		width: 286px;
-	}
-
-	.masagistka-center .masagistka-mask {
-		width: 312px;
+		width: 100%;
 	}
 
 	.masagistka:hover .masagistka-mask {
-	   border: 143px solid rgba(0,0,0,0.7);
+	   border: 170px solid rgba(0,0,0,0.7);
 	}
-
-	.masagistka-center:hover .masagistka-mask {
-	   border: 156px solid rgba(0,0,0,0.7);
-	}
-
 
 	.naming {
-		left: -5px;
+		left: 0;
 		padding: 8px 12px;
 		top: 10px;
 	}
@@ -1593,17 +1585,9 @@ a.pp_next {
 
 	.masagistka img {
 		width: 240px;
+		height: 460px;
 	}
 
-	.masagistka-center {
-		margin-right: 11px;
-	}
-
-	.masagistka-center img {
-		width: 262px;
-	}
-
-	.masagistka-center .masagistka-mask,
 	.masagistka .masagistka-mask {
 		height: 378px;
 	}
@@ -1612,17 +1596,10 @@ a.pp_next {
 		width: 240px;
 	}
 
-	.masagistka-center .masagistka-mask {
-		width: 260px;
-	}
-
 	.masagistka:hover .masagistka-mask {
 	   border: 120px solid rgba(0,0,0,0.7);
 	}
 
-	.masagistka-center:hover .masagistka-mask {
-	   border: 131px solid rgba(0,0,0,0.7);
-	}
 }
 
 	@media only screen and (max-width: 768px) {
@@ -1630,8 +1607,7 @@ a.pp_next {
 			float: none;
 		}
 
-		.masagistka,
-		.masagistka-center {
+		.masagistka {
 			display: block;
 			float: none;
 			margin: 0 auto 30px;
@@ -1639,42 +1615,29 @@ a.pp_next {
 			width: 300px;
 		}
 
-		.masagistka img,
-		.masagistka-center img {
-			width: 300px;
-		}
-
-		.masagistka:last-child {
-			margin-right: auto;
-		}
-
-		.masagistka-center .masagistka-mask {
-			height: 433px;
+		.masagistka img {
+			width: 100%;
 		}
 
 		.masagistka .masagistka-mask {
-			height: 472px;
+			height: 100%;
 		}
 
-		.masagistka .masagistka-mask,
-		.masagistka-center .masagistka-mask {
+		.masagistka .masagistka-mask {
 			width: 300px;
 		}
 
-		.masagistka:hover .masagistka-mask,
-		.masagistka-center:hover .masagistka-mask {
-		   border: 150px solid rgba(0,0,0,0.7);
+		.masagistka:hover .masagistka-mask {
+		   border: 152px solid rgba(0,0,0,0.7);
 		}
 	}
 
 	@media only screen and (max-width: 480px) {
-		.masagistka,
-		.masagistka-center {
-			cursor: default;
+		.masagistka img {
+			cursor: pointer;
 		}
 
-		.masagistka .masagistka-mask,
-		.masagistka-center .masagistka-mask {
+		.masagistka .masagistka-mask {
 			display: none;
 		}
 	}
@@ -2234,9 +2197,6 @@ i.input-icon {
 	margin-bottom: 45px;
 }
 
-.comment:last-child {
-	margin-bottom: 0;
-}
 
 .comment-name {
 	color: #f0a423;
@@ -2308,7 +2268,9 @@ i.input-icon {
 }
 
 @media only screen and (max-width: 480px) {
-
+	.modal-large{
+		width: 300px;
+	}
 	.feedback-field {
 		width: 300px;
 	}
