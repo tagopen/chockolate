@@ -686,6 +686,7 @@ h1 {
 }
 .modal-large{
 	width: 360px;
+	margin: 0 auto;
 }
 
 @media only screen and (max-width: 1170px) {
@@ -1566,7 +1567,7 @@ a.pp_next {
 	}
 
 	.masagistka:hover .masagistka-mask {
-	   border: 148px solid rgba(0,0,0,0.7);
+	   border: 170px solid rgba(0,0,0,0.7);
 	}
 
 	.naming {
