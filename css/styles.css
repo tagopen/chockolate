@@ -684,6 +684,9 @@ h1 {
 	font-size: 30px;
 	color: #f6a824;
 }
+.modal-large{
+	width: 360px;
+}
 
 @media only screen and (max-width: 1170px) {
 	.container {
@@ -1437,6 +1440,7 @@ h1 {
 
 
 /* start of masagistki.html styles*/
+
 .masagistki-top-content {
 	background: #010006;
 	padding: 165px 0 80px;
@@ -2263,7 +2267,9 @@ i.input-icon {
 }
 
 @media only screen and (max-width: 480px) {
-
+	.modal-large{
+		width: 300px;
+	}
 	.feedback-field {
 		width: 300px;
 	}
