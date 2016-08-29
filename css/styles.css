@@ -56,6 +56,7 @@ html {
 	text-align: center;
 	vertical-align: middle;
 	width: 33px;
+	cursor: pointer;
 }
 
 .logo {
@@ -576,6 +577,91 @@ h1 {
 	color: #f6a824;
 }
 
+/*start of modal styles*/
+
+
+.modal-open .modal{
+	overflow-y: visible;
+}
+.callback__dialog{
+	max-width: 450px;
+	margin: 30px auto 0;
+}
+.modal-content{
+	border: 2px solid #906217;
+	-webkit-border-radius: 0;
+	-moz-border-radius: 0;
+	-ms-border-radius: 0;
+	border-radius: 0;
+	background-color: black;
+}
+.modal__body__form{
+	padding: 15px 45px 45px;
+}
+.modal__body__form .form-group{
+	padding: 0;
+	position: relative;
+	margin-bottom: 25px;
+}
+
+.modal__body__form .form-group .fa{
+	position: absolute;
+	top: 10px;
+	right: 20px;
+}
+.modal-body .close{
+	opacity: 1;
+	color: #fff;
+	font-size: 36px;
+}
+.form__btn{
+	width: 100%;
+	font-size: 24px;
+	color: #5d0f1b;
+	height: auto;
+	color: #fff;
+	-webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  -ms-border-radius: 0;
+  border-radius: 0;
+}
+
+.form__btn:hover,
+.form__btn:active,
+.form__btn:focus{
+	color: #fff;
+}
+
+.form__heading{
+	color: #fff;
+}
+.form__heading{
+	margin-bottom: 30px;
+}
+.form-control{
+	color: #000;
+}
+.modal__body__form .form-group .form-control {
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  -ms-border-radius: 0;
+  border-radius: 0;
+}
+
+.modal__body__form .form-group .form-control:focus {
+  -webkit-box-shadow: " inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(144,98,23,.7) ";
+  -moz-box-shadow: " inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(144,98,23,.7) ";
+  -ms-box-shadow: " inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(144,98,23,.7) ";
+  -o-box-shadow: " inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(144,98,23,.7) ";
+  box-shadow: " inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(144,98,23,.7) ";
+  border-color: rgb(144,98,23);
+}
+.modal__body__form .form-group .form-control:focus ~ .fa {
+  color: rgb(144,98,23);
+}
+.modal__body__form .form-group .form-control::-moz-placeholder {
+  color: #000;
+}
 
 @media only screen and (max-width: 1170px) {
 	.container {
@@ -2213,6 +2299,12 @@ i.input-icon {
 	.footer-contact li {
 		margin-right: 0;
 	}
+	.modal__body__form{
+		padding: 15px 50px 30px;
+	}
+	.form__btn{
+		width: 100%;
+	}
 }
 
 @media only screen and (max-width: 480px) {
@@ -2247,6 +2339,12 @@ i.input-icon {
 	.second-phone-number {
 		display: block;
 		margin: 0 0 15px 30px;
+	}
+	.modal__body__form{
+		padding: 15px 20px 30px;
+	}
+	.form__btn{
+		width: 100%;
 	}
 }
 
